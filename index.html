@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <audio src="./music.mp3" autoplay="true" loop="loop"></audio>
+    <audio id="audio" src="./music.mp3"  loop="loop"></audio>
     <div id="back">
         <div class="mask"></div>
         <!-- 设置展示的图片，github pages不能有后台程序只能一条一条手动添加了 囧 -->
@@ -82,6 +82,20 @@
         }();
 
     });
+    document.addEventListener("click",function (){
+        function audioAutoPlay(){
+            const audio = document.getElementById('audio')
+            audio.play()
+        }
+        audioAutoPlay()
+    })
+    document.addEventListener("touchstart",function (){
+        function audioAutoPlay(){
+            const audio = document.getElementById('audio')
+            audio.play()
+        }
+        audioAutoPlay()
+    })
     </script>
 </body>
 
